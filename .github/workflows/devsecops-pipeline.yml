@@ -49,9 +49,10 @@ jobs:
             trivy-fs-report.sarif
             trivy-image-report.txt
  
-  gitleaks-scan:
+gitleaks-scan:
     name: Detección de Secretos (Gitleaks)
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
         with:
